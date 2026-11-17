@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GeebsBuilds | Greg Stewart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="GeebsBuilds: automation tools and practical software projects by Greg Stewart.">
+<style>
+  :root { --bg:#12161c; --panel:#1b212a; --line:#313c4a; --text:#e8edf3; --muted:#9aa8ba; --accent:#f2a03d; --good:#5fc98a; --blue:#6aa9f0; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.65 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 22px; }
+  nav { position: sticky; top: 0; background: rgba(18,22,28,.94); border-bottom: 1px solid var(--line); z-index: 5; }
+  nav .wrap { display:flex; justify-content:space-between; align-items:center; height:60px; }
+  .brand { font-weight:700; font-size:20px; color:var(--text); text-decoration:none; }
+  .brand span { color: var(--accent); }
+  nav ul { list-style:none; display:flex; gap:22px; margin:0; padding:0; }
+  nav ul a { color:var(--muted); text-decoration:none; font-size:15px; }
+  nav ul a:hover { color: var(--accent); }
+  header.hero { padding: 90px 0 70px; }
+  .hero h1 { font-size: clamp(34px, 6vw, 54px); line-height:1.15; margin:0 0 18px; max-width: 760px; }
+  .hero h1 span { color: var(--accent); }
+  .hero p { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0 0 28px; }
+  .btn { display:inline-block; background:var(--accent); color:#1b1408; font-weight:600; text-decoration:none; padding:11px 22px; border-radius:8px; }
+  .btn.ghost { background:none; color:var(--text); border:1px solid var(--line); margin-left:10px; }
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 14px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
+  h3.big { font-size: 30px; margin: 0 0 22px; line-height: 1.25; }
+  .cols { display:grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
+  .facts { list-style:none; margin:0; padding:0; }
+  .facts li { padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
+  .facts b { color: var(--text); display:block; font-size: 15px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:22px; display:flex; flex-direction:column; }
+  .card h4 { margin: 10px 0 8px; font-size: 20px; }
+  .card p { margin: 0 0 14px; color: var(--muted); font-size: 16px; flex: 1; }
+  .tag { align-self:flex-start; font-size: 12px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding: 3px 10px; border-radius: 999px; color:#10141a; }
+  .tag.live { background: var(--good); } .tag.cert { background: var(--blue); } .tag.wip { background: #f2c94c; }
+  .tools { font-size: 14px; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 720px) { .cols { grid-template-columns: 1fr; } nav ul { gap: 14px; } .btn.ghost { margin: 10px 0 0; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Geebs<span>Builds</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1>I build tools that take <span>repetitive work</span> off people's plates.</h1>
+    <p>I'm Greg Stewart. I build automations, AI agents and small practical apps, and I document every finished project here.</p>
+    <a class="btn" href="#projects">See my projects</a>
+    <a class="btn ghost" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap cols">
+    <div>
+      <h2>About</h2>
+      <h3 class="big">A second career, built one finished project at a time.</h3>
+      <p>Before software, I worked in healthcare, the military and sales. Those jobs taught me how real offices run and where time gets wasted on manual steps.</p>
+      <p>Now I'm training as an AI automation builder. I work in n8n, Python and Excel, and I follow one rule: a project goes on this site only when it is finished and working.</p>
+    </div>
+    <ul class="facts">
+      <li><b>Focus</b>AI automation and agents with n8n</li>
+      <li><b>Also work in</b>Python, Excel, JavaScript</li>
+      <li><b>Training</b>Zero To Mastery Academy</li>
+      <li><b>Working hours</b>Available during US and European business hours</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <h3 class="big">What I've built and what I'm building.</h3>
+    <div class="grid">
+
+      <div class="card">
+        <span class="tag live">In daily use</span>
+        <h4>Focus Tracker</h4>
+        <p>A one-page app that limits me to three active projects, logs daily work, tracks a streak, and parks new ideas so they don't derail the current ones. Runs offline in the browser.</p>
+        <div class="tools">HTML, CSS, JavaScript. Built with AI assistance.</div>
+      </div>
+
+      <div class="card">
+        <span class="tag cert">Certified</span>
+        <h4>Excel data analysis</h4>
+        <p>Completed the Advanced Excel Bootcamp: Data Analytics and Business Intelligence (July 2026). Covers PivotTables, DAX measures, lookups, data cleaning and interactive dashboards.</p>
+        <div class="tools">Excel, Power Pivot, DAX</div>
+      </div>
+
+      <div class="card">
+        <span class="tag live">Completed</span>
+        <h4>Retirement Planning Tool</h4>
+        <p>An Excel workbook that projects income, expenses and savings year by year and shows the age the money runs out. Inputs for inflation, tax rate and risk tolerance update a live chart.</p>
+        <div class="tools">Excel: 2,000+ formulas, named ranges, lookups, form controls, dynamic chart. Course project, Zero To Mastery.</div>
+      </div>
+
+      <div class="card">
+        <span class="tag wip">In progress</span>
+        <h4>AI agents with n8n</h4>
+        <p>Building an AI agent that reads a calendar, checks the weather, searches the web and sends a daily report by email and Telegram. The finished workflow will be published here.</p>
+        <div class="tools">n8n, LLM APIs, Google Calendar, Gmail, Telegram</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <h3 class="big">Have a repetitive task you'd like automated?</h3>
+    <p>Email me at <a href="mailto:geebsbuilds@gmail.com">geebsbuilds@gmail.com</a>. You can also find my code on <a href="https://github.com/haulinggb">GitHub</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">&copy; 2026 GeebsBuilds. Built by Greg Stewart.</div>
+</footer>
+
+</body>
+</html>
